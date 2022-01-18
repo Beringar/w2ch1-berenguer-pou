@@ -16,4 +16,17 @@ describe("Given a strictEquals function", () => {
       expect(areEqualValues).toBe(expectedResult);
     });
   });
+  describe("When it receives 1 as first value and '1' as second value", () => {
+    test("Then it should return false", () => {
+      // Arrange
+      const values = [1, "1"];
+      const expectedResult = false;
+
+      // Act
+      const areEqualValues = strictEquals(values);
+
+      // Assert
+      expect(areEqualValues).toBe(expectedResult);
+    });
+  });
 });
