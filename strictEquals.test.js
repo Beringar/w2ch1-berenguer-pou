@@ -29,4 +29,17 @@ describe("Given a strictEquals function", () => {
       expect(areEqualValues).toBe(expectedResult);
     });
   });
+  describe("When it receives true as first value and false as second value", () => {
+    test("Then it should return false", () => {
+      // Arrange
+      const values = [true, false];
+      const expectedResult = false;
+
+      // Act
+      const areEqualValues = strictEquals(values);
+
+      // Assert
+      expect(areEqualValues).toBe(expectedResult);
+    });
+  });
 });
