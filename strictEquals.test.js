@@ -6,7 +6,7 @@ const strictEquals = ([a, b]) => {
   for (exceptionPair of ruleExceptionValuePairs) {
     if (exceptionPair.includes(a) && exceptionPair.includes(b)) {
       throw new Error(
-        `ERROR: The equality of ${a} and ${b} are a Rule Exception`
+        `ERROR: Perform Strict equality on these two values is a Rule Exception!`
       );
     }
   }
@@ -79,6 +79,21 @@ describe("Given a strictEquals function", () => {
 
       // Assert
       expect(areEqualValues).toBe(expectedResult);
+    });
+  });
+  describe("When it receives NaN as first value and NaN as second value", () => {
+    test("Then it should throw an error with the message: 'ERROR: Perform Strict equality on these two values is a Rule Exception!'", () => {
+      // Arrange
+      const values = [NaN, NaN];
+      const errorMessage =
+        "ERROR: Perform Strict equality on these two values is a Rule Exception!";
+
+      // Act
+
+      // Assert
+      expect(() => {
+        strictEquals(values);
+      }).toThrow(errorMessage);
     });
   });
 });
