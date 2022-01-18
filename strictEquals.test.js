@@ -29,6 +29,51 @@ describe("Given a strictEquals function", () => {
       expect(areEqualValues).toBe(expectedResult);
     });
   });
+  describe("When it receives NaN as first value and NaN as second value", () => {
+    test("Then it should throw an error with the message: 'ERROR: Perform Strict equality on these two values is a Rule Exception!'", () => {
+      // Arrange
+      const values = [NaN, NaN];
+      const errorMessage =
+        "ERROR: Perform Strict equality on these two values is a Rule Exception!";
+
+      // Act
+
+      // Assert
+      expect(() => {
+        strictEquals(values);
+      }).toThrow(errorMessage);
+    });
+  });
+  describe("When it receives 0 or as first value and -0 or as second value", () => {
+    test("Then it should throw an error with the message: 'ERROR: Perform Strict equality on these two values is a Rule Exception!'", () => {
+      // Arrange
+      const values = [0, -0];
+      const errorMessage =
+        "ERROR: Perform Strict equality on these two values is a Rule Exception!";
+
+      // Act
+
+      // Assert
+      expect(() => {
+        strictEquals(values);
+      }).toThrow(errorMessage);
+    });
+  });
+  describe("When it receives -0 or as first value and 0 or as second value", () => {
+    test("Then it should throw an error with the message: 'ERROR: Perform Strict equality on these two values is a Rule Exception!'", () => {
+      // Arrange
+      const values = [-0, 0];
+      const errorMessage =
+        "ERROR: Perform Strict equality on these two values is a Rule Exception!";
+
+      // Act
+
+      // Assert
+      expect(() => {
+        strictEquals(values);
+      }).toThrow(errorMessage);
+    });
+  });
   describe("When it receives 1 as first value and '1' as second value", () => {
     test("Then it should return false", () => {
       // Arrange
@@ -79,21 +124,6 @@ describe("Given a strictEquals function", () => {
 
       // Assert
       expect(areEqualValues).toBe(expectedResult);
-    });
-  });
-  describe("When it receives NaN as first value and NaN as second value", () => {
-    test("Then it should throw an error with the message: 'ERROR: Perform Strict equality on these two values is a Rule Exception!'", () => {
-      // Arrange
-      const values = [NaN, NaN];
-      const errorMessage =
-        "ERROR: Perform Strict equality on these two values is a Rule Exception!";
-
-      // Act
-
-      // Assert
-      expect(() => {
-        strictEquals(values);
-      }).toThrow(errorMessage);
     });
   });
 });
