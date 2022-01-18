@@ -42,4 +42,30 @@ describe("Given a strictEquals function", () => {
       expect(areEqualValues).toBe(expectedResult);
     });
   });
+  describe("When it receives false as first value and false as second value", () => {
+    test("Then it should return true", () => {
+      // Arrange
+      const values = [false, false];
+      const expectedResult = true;
+
+      // Act
+      const areEqualValues = strictEquals(values);
+
+      // Assert
+      expect(areEqualValues).toBe(expectedResult);
+    });
+  });
+  describe("When it receives 'Water' as first value and 'oil' as second value", () => {
+    test("Then it should return false", () => {
+      // Arrange
+      const values = ["Water", "oil"];
+      const expectedResult = false;
+
+      // Act
+      const areEqualValues = strictEquals(values);
+
+      // Assert
+      expect(areEqualValues).toBe(expectedResult);
+    });
+  });
 });
