@@ -1,4 +1,17 @@
-const strictEquals = ([a, b]) => Object.is(a, b);
+const strictEquals = ([a, b]) => {
+  const ruleExceptionValuePairs = [
+    [NaN, NaN],
+    [0, -0],
+  ];
+  for (exceptionPair of ruleExceptionValuePairs) {
+    if (exceptionPair.includes(a) && exceptionPair.includes(b)) {
+      throw new Error(
+        `ERROR: The equality of ${a} and ${b} are a Rule Exception`
+      );
+    }
+  }
+  return Object.is(a, b);
+};
 
 // Tests
 
