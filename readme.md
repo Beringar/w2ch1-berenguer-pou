@@ -1,4 +1,4 @@
-**Challenge Strict Equality comparison function**
+*Challenge Strict Equality comparison function*
 **(Week 02 CH 1)**
 
 Our project manager Mario G wants us to:
@@ -10,10 +10,13 @@ Our project manager Mario G wants us to:
 4. use Jest to implement a set of 8 tests (listed in this document)
 
 Attached files:
+
 strict-equals.test.js
+
 strict-equals-throw-exceptions.test.js
 
 **Run tests command**
+
 `npm test`
 
 Expected outcome:
