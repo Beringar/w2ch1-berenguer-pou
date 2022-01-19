@@ -1,5 +1,5 @@
 **Challenge Strict Equality comparison function**
-**(week 2 ch 1)**
+**(Week 02 CH 1)**
 
 Our project manager Mario G wants us to:
 
