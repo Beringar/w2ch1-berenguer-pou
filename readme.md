@@ -1,4 +1,4 @@
-# Strict Equality comparison function challenge 
+# Strict Equality comparison function challenge
 
 ## (Week 02 CH 1)
 
@@ -6,10 +6,10 @@
 
 Our project manager Mario G wants us to:
 
-1. create a function __strictEquals(a,b)__ which compares
+1. create a function **strictEquals(a,b)** which compares
    strict equality for two values and returns a boolean value
-2. this function must return the same boolean value as __a===b__
-3. implemetation __cannot use === or !=== comparison operators__
+2. this function must return the same boolean value as **a===b**
+3. implemetation **cannot use === or !=== comparison operators**
 4. use Jest to implement a set of 8 tests (listed in this document)
 
 ### Attached files:
@@ -24,9 +24,15 @@ strict-equals-throw-exceptions.test.js
 
 #### Expected outcome:
 
-strictEquals(a,b) returns same value as a===b in all cases
+##### strictEquals(a,b)
 
-strictEqualsThrowExceptions(a,b) returns same value as a===b
+Returns same value as a===b in all cases
+
+Jest prints 'This is a Rule exception' for rule exception cases.
+
+##### strictEqualsThrowExceptions(a,b)
+
+Returns same value as a===b
 except in cases marked as Rule Exceptions ([NaN], [0,-0], [-0,0])
 which throw an exception error.
 
