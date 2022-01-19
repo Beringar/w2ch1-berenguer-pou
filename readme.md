@@ -1,4 +1,4 @@
-# Challenge Strict Equality comparison function
+# Strict Equality comparison function challenge 
 
 ## (Week 02 CH 1)
 
