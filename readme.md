@@ -14,9 +14,9 @@ Our project manager Mario G wants us to:
 
 ### Attached files:
 
-strict-equals.test.js
+strict-equals.test.js (my solution)
 
-strict-equals-throw-exceptions.test.js
+strict-equals-throw-exceptions.test.js (just for testing)
 
 ### Run tests command
 
